@@ -17,7 +17,7 @@
           <div class="d-flex justify-content-between align-items-center p-4">
             <div class="users-profile top-125 d-flex align-items-end ms-0">
               <div class="position-relative">
-                <img class="wh-200 rounded-circle" src="https://gerp-zalo-v12.phanmemdoanhnghiep.net/web/image/res.users/2/image?session_id=ab852e0d0e9ef6df38c314282bf008fac5bd967e" alt="profile-img" />
+                <img class="wh-200 rounded-circle" src="{{ Image }}" alt="profile-img" />
                 <div class="product-upload position-absolute bottom-0 end-0"
                   style="right: 5px !important; bottom: 5px !important">
                   <label for="file-upload" class="file-upload mb-0">
@@ -1193,7 +1193,8 @@
             <li class="fs-14 text-body mb-2">
               <span class="text-dark">Orders:</span> 685
             </li>
-            <li class="fs-14 text-body mb-2">
+            <li class="fs-14 te
+            xt-body mb-2">
               <span class="text-dark">Products:</span> 1250
             </li>
             <li class="fs-14 text-body mb-0">
@@ -1212,18 +1213,17 @@ export default defineComponent({
   name: "ProfileContent",
   data() {
     return {
-      user: {}
+      user: {},
+      base_url : 'https://gerp-zalo-v12.phanmemdoanhnghiep.net',
     }
   }
   ,
   mounted() {
     const userData = localStorage.getItem('user');
-   
-
     if (userData) {
       this.user = JSON.parse(userData)
     }
-  }
+  },
 });
 
 </script>
